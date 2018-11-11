@@ -10,4 +10,4 @@
 
 ## Resources
 
-(Live coding)[http://swcarpentry.github.io/swc-releases/2016.06/instructor-training/13-live/]
+[Live coding](http://swcarpentry.github.io/swc-releases/2016.06/instructor-training/13-live/)
