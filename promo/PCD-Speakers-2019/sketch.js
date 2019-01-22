@@ -1,5 +1,8 @@
+
 //GIF FRAMES
-let gifFileName = "pcd2019-speaker-000.gif";
+//let gifFileName = "pcd2019-speaker-000.gif";
+//let gifFileName = "pcd2019-speaker-rintu-updated.gif";
+let gifFileName = "pcd2019-speaker-mitali-updated.gif";
 let frames = 0;
 let totalFrames = 120;
 let recording = false;
@@ -8,17 +11,26 @@ let gifInfo = null;
 let capturer = null;
 
 //IMAGES
-let photoFileName = "nat512Artboard_1.png";
+//let photoFileName = "nat512Artboard_1.png";
+let photoFileName = "mm-photo.jpg";
+//let photoFileName = "rintu-photo.png";
 let img, photo;
 let maskImage;
 
 // TEXT
-let c = "COMPUTATIONAL";
-let d = " ethnography ";
-let day = "DAY 9 ";
+//let c = "COMPUTATIONAL";
+let c = "INTEGRATIVE";
+// let d = " ethnography ";
+let d = " genomics ";
+//let d = " biology ";
+// let day = "6 DAYS TO GO";
+let day = "5 DAYS TO GO";
 let date = "27.01.2019";
-let m = "ARTIST";
-let name = "NATASHA SINGH";
+//let m = "DATA SCIENTIST";
+let m = "GENOMIC SCIENTIST";
+// let name = "NATASHA SINGH";
+//let name = "RINTU KUTUM";
+let name = "MITALI MUKERJI";
 let domainXPost = 50;
 let d_start_pos = 40;
 let dw;
@@ -47,12 +59,14 @@ function setup() {
   //
   fullCanvas = createCanvas(400, 520);
   //
-  background(200);
+  //background(200);
+  background(50);
+  
   smooth(6);
 	//
-
+  background(212, 0, 85);
 	// PHOTO CIRCULAR MASK
-	maskImage = createGraphics(512,512);
+  maskImage = createGraphics(512,512);
   maskImage.ellipse (256,256, 512,512);
   photo.mask(maskImage);
 
@@ -72,7 +86,8 @@ function createGif() {
 
 function draw() {
 
-	background(200);
+	background(50);
+	//background(212, 0, 85);
 
   //ARTIST IMAGE
 	image(photo, 15,240, 100, 100);
@@ -160,11 +175,11 @@ function drawTextElements(){
 
   fill(91,0,180);
   noStroke();
-  rect (15,15,100,40);
+  rect (15,15,120,40);
 
   fill(255);
-  text (day,20,20,100,100);
-  text ("PCD@Delhi ", 20, 50, 100);
+  text (day,20,20,120,120);
+  text ("PCD@Delhi ", 20, 50, 120);
 
   // TOPIC
   textSize(35);
