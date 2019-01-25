@@ -6,6 +6,7 @@ canvas {
   display: block;
 }
 
+
 .gif{
 	padding-left: 5px;
 	margin: 10px;
@@ -24,4 +25,3 @@ canvas {
 #download-link{
 	visibility: hidden;
 }
-
