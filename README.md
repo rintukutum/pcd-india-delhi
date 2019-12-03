@@ -1,9 +1,7 @@
-# pcd-india
-PCD-INDIA contents
+# pcd-delhi
 
-## Suggested by the team (email- sent by Mike)
+
+## Contents
 - Workshop materials (for a beginner introduction)
-- Tracks for group discussions on software art and,
-- Ways to make software art more accessible to the design, scientific and tech community alike.
-
-## Planning for 8-hours workshop
+- Promotion 
+- Website
