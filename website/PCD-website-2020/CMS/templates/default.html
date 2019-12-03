@@ -3,25 +3,181 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>{{ page.name }}'s Portfolio </title>
+    <title>{{ page.name }} | Homepage </title>
     <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
     <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/screen.css" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        font-size: 16px;
+      }
+
+      .reg p {
+        font-size: 13px;
+      }
+
+      #container {
+        min-height: 42px;
+      }
+
+      .hero-image {
+        margin: 0px auto;
+        width: 860px;
+        padding: 5px 20px;
+        text-align: left;
+
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+
+      /*
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        color: white;
+        width: 100%;
+        bottom: 0;
+      }
+
+
+      .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      */
+
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 10px 25px;
+        color: black;
+        background-color: #ddd;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      .alert-box {
+        background-color: #fffbcc;
+        color: #444;
+        font-size: 14px;
+        line-height: 23px;
+        padding: 13px 16px;
+      }
+
+      .badge {
+        border-radius: 2px;
+        color: #000;
+        margin-left: 4px;
+        padding: 3px 5px 3px 4px;
+        position: relative;
+        text-transform: uppercase;
+      }
+    </style>
+
+
   </head>
   <body>
+
     <div id="container">
-      <h1 class="col three">
+
+      <h1 style="float: left;">
         <a href="{{ page.root_path }}">{{ page.name }}</a>
-        <strong>{{ page.profession }}</strong>
+        <strong>{{ page.group }}</strong>
       </h1>
-      <em class="col three">{{ page.email }}</em>
-      <hr>
-      {% include 'partials/navigation/navigation.html' %}
+
+
+      <div style="float: right;">
+        {% include 'partials/navigation/navigation.html' %}
+      </div>
+      <!--
       <div id="content" class="col eight">
         {% include 'partials/navigation/category-lists.html' %}
+      </div> -->
+      <!--
+      <p id="footer" class="col six">&copy; Copyright {{ page.name }} {{ page.current_year }} <a class="atom-rss" href="{{ page.root_path }}/?/feed/">RSS</a><br>
+         <em>{{ page.email }}</em>
+        <em>Content managed by <a href="http://www.staceyapp.com">stacey</a></em></p-->
+    </div>
+
+    <div class="hero-image"></div>
+
+    <!--div class="hero-image">
+      <div class="hero-text" >
+        <div style="width: 33%; margin: 0;" class="col">
+        <h1 style="font-size:50px;float: right;">ART</h1>
+        </div>
+        <div style="width: 33%; margin: 0;" class="col">
+        <span class="dot"></span>
+        <h1 style="font-size:50px;display: inline;">SCIENCE</h1>
+        <span class="dot"></span>
+        </div>
+        <div style="width: 33%; margin: 0;" class="col">
+        <h1 style="font-size:50px;float: left;">TECH</h1>
+        </div>
+      </div>
+    </div-->
+
+    <div style = "margin: 0px auto;
+        width: 860px;
+        padding: 5px 20px;
+        text-align: left;">
+      <h1 style="font-size:32px;float: left;"> A day to celebrate art, code, and diversity — </h1>
+      <div style="float: left;margin: 0;width:100%;">
+        <p class="alert-box">
+          <span class="col one" style="margin-left: 0;"><span class="badge" style="display: inline;"><i class="material-icons" style="font-size:36px">announcement</i></span></span>
+          <span style="display: inline;">Our <a>OPEN CALL</a> for presenters at Processing Community Day Delhi 2020 is now live! <br>Check out our call and make a submission today!</span>
+        </p>
       </div>
       <hr>
-      <p id="footer" class="col six">&copy; Copyright {{ page.name }} {{ page.current_year }} <a class="atom-rss" href="{{ page.root_path }}/?/feed/">RSS</a><br>
-        <em>Content managed by <a href="http://www.staceyapp.com">stacey</a></em></p>
+      <div class="reg col three" style="float: right;margin-top: -20px;">
+        <h1 style="font-size:21px;">Date and Time</h1>
+        <p>Feb 01, 2020 and Feb 02, 2020 </p>
+        <p>9:30 AM – 2:30 PM IST</p>
+        <p><a>Add to Calendar</a></p>
+        <br>
+        <h1 style="font-size:21px;">Location</h1>
+        <p>Timeblur Studio, D26 (Opp. B9 Gate 3), Bhagwan Mahaveer Road, Vasant Kunj, New Delhi, Delhi 110070</p>
+        <p><a>View Map</a></p>
+      <button style="float:left; margin: 20px 0;">Get Tickets</button>
+      </div>
+      <div class="col eight"  style="float: left; max-width: 560px; margin-left: 0;">
+      <p>Processing is a free and open-source software platform for learning how to code within the context of the visual arts, created by Casey Reas and Ben Fry. It is complemented by a web version, called p5.js, created by Lauren McCarthy. To date, Processing and p5.js are used by a worldwide community of artists, coders, educators, students.<p>
+      <p>The aim of this community is to make code accessible to diverse communities, and to merge the barriers between Art, Science and Tecnology. On the Day of the event, you'll learn few tricks and play with p5 to add life to a character or to just create beautiful patterns and prints with a machine. No prior coding experience is really required to make it, just a ton of curiosity to learn and understand how programs work?</p>
+      <br>
+      <p>Read more about the <a href="https://medium.com/processing-foundation/a-modern-prometheus-59aed94abe85" target="_blank">history of Processing</a>. The first PCD Delhi was held on January 27, 2019 at Timeblur Studio in New Delhi. <!--- below are some nice moments captured from the event.--> <p>
+      </div>
+
+
     </div>
+
+
+
+    <hr>
+
+
+
+
+
+
+
   </body>
 </html>

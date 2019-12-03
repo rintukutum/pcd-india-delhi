@@ -1,6 +1,6 @@
-<ul id="navigation" class="col two">
+<ul id="navigation">
   {% for child in page.root %}
-    <li>
+    <li style="display: inline; margin: 0 0 0 10px;">
       <a href="{{ child.url }}">{{ child.title }}</a>
       {% include 'partials/navigation/children.html' with { 'page' : child } %}
     </li>
