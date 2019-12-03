@@ -5,30 +5,45 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>{{ page.title }}, {{ page.name }}'s Portfolio </title>
     <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
-    <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/screen.css" type="text/css" media="screen"> 
+    <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/screen.css" type="text/css" media="screen">
   </head>
   <body>
     <div id="container" class="{{ page.id }}">
-      <h1 class="col three">
+      <h1 class="col three" style="float: left;">
         <a href="{{ page.root_path }}">{{ page.name }}</a>
-        <strong>{{ page.profession }}</strong>
+        <strong>{{ page.group }}</strong>
       </h1>
-      <em class="col three">{{ page.email }}</em>
-      <hr>
-      {% include 'partials/navigation/navigation.html' %}
-      <div id="content" class="col eight">
-        <p class="date col one">&para;</p>
-        <div class="description col six">
-          <h2 class="col six"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
-          {% include 'partials/assets/images.html' %}
-          {{ page.content }}
-          {% include 'partials/assets/pdfs.html' %}
+      <div style="float: right;">
+        {% include 'partials/navigation/navigation.html' %}
+      </div>
+    </div>
+    <hr>
+    <div id="content"  style = "margin: 0px auto;
+        width: 560px;
+        padding: 5px 20px;
+        text-align: left;">
+      <h1 style="font-size:32px;text-align: center;"> <a href="{{ page.root_path }}">{{ page.title }}</a> </h1>
+
+      <div>
+        {% include 'partials/assets/media.html' %}
+        <div id="gallery-navigation" class="col three" style="width:100%;">
+          <p style="float: left;"><em>&larr;</em> <a href="#" id="previous-image">Previous image</a> </p>
+          <p id="gallery-count" class="col one" style="color: white;"><em style="color: white;">&#8470;</em> <span>1/1</span></p>
+          <p style="float: right;margin-right: 40px;"><a href="#" id="next-image">Next image</a> <em>&rarr;</em></p>
         </div>
       </div>
+
       <hr>
-      <p id="footer" class="col six">&copy; Copyright {{ page.name }} {{ page.current_year }} <a class="atom-rss" href="{{ page.root_path }}/?/feed/">RSS</a><br>
-        <em>Content managed by <a href="http://www.staceyapp.com">stacey</a></em></p>
+      <div class="col eight"  style="max-width: 560px; margin-left: 0;">
+        <p>{{ page.content }}</p>
+      </div>
     </div>
     <script src="{{ page.root_path }}/public/docs/js/jquery-1.3.2.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      document.getElementsByTagName('body')[0].className += ' js-enabled';
+    </script>
+    <script src="{{ page.root_path }}/public/docs/js/gallery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ page.root_path }}/public/docs/js/init-gallery.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

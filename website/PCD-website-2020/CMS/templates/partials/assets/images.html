@@ -2,7 +2,7 @@
   <div class="image">
     <img src="{{ image.url }}" alt="{{ image.title }}" width="{{ image.width }}" height="{{ image.height }}">
     {% if image.description %}
-      <em>{{ image.description }}</em>
+      <div style="width:560px; text-align:center;"><em>{{ image.description }}</em></div>
     {% endif %}
   </div>
 {% endfor %}
