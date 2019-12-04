@@ -1,3 +1,4 @@
+<!-- font sizes: 44px, 26px, 21px -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -8,11 +9,17 @@
     <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/screen.css" type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
+      @font-face {
+        font-family: 'Avenir';
+        src: url("public/fonts/AvenirLTStd-Book.woff") format("woff"), url("public/fonts/AvenirLTStd-Book.ttf")  format("truetype");
+      }
+
       body, html {
         height: 100%;
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Avenir', serif;
       }
+
       p {
         font-size: 16px;
       }
@@ -25,13 +32,37 @@
         min-height: 42px;
       }
 
+      .logo-image {
+        margin: 0px auto;
+        padding: 5px 20px;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("{{ page.root_path }}/public/images/0000_white-background-purple3-1-800x812-q85.png");
+        width: 128px;
+        height: 140px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
       .hero-image {
         margin: 0px auto;
-        width: 860px;
         padding: 5px 20px;
         text-align: left;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("{{ page.root_path }}/public/images/SAT.png");
+        width: 100%;
+        height: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
 
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+      .venue-image {
+        margin: 0px auto;
+        padding: 5px 20px;
+        text-align: left;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("{{ page.root_path }}/public/images/venue-info-bg.jpg");
         height: 50%;
         background-position: center;
         background-repeat: no-repeat;
@@ -41,17 +72,18 @@
 
       button {
         border: none;
+        border-radius: 12px;
         outline: 0;
         display: inline-block;
         padding: 10px 25px;
-        color: black;
-        background-color: #ddd;
+        color: white;
+        background-color: #6C00B3;
         text-align: center;
         cursor: pointer;
       }
 
       button:hover {
-        background-color: #555;
+        background-color: #8933c2;
         color: white;
       }
 
@@ -71,54 +103,149 @@
         position: relative;
         text-transform: uppercase;
       }
+
+      .center {
+        margin: auto;
+        width: 50%;
+        border: none;
+        padding: 10px;
+      }
+
+
+      .subheader{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:center;
+      }
     </style>
-
-
   </head>
   <body>
 
     <div id="container">
 
-      <h1 style="float: left;">
-        <a href="{{ page.root_path }}">{{ page.name }}</a>
-        <strong>{{ page.group }}</strong>
-      </h1>
+        <hr>
+
+        <a href="{{ page.root_path }}">
+            <div class="logo-image" style="margin-right: 45%;">
+            <div style="padding:0;height:140px;height: 140px;font-size: 44px;padding-top: 50px;padding-left: 140px;color: #6C00B3;">Delhi</div>
+            </div>
+        </a>
 
 
-      <div style="float: right;">
+      <!--div style="float: right;">
         {% include 'partials/navigation/navigation.html' %}
-      </div>
+      </div-->
     </div>
 
+
+    <!-- BANNER -->
+    <hr>
+    <hr>
     <div class="hero-image"></div>
 
-    <div style = "margin: 0px auto;
-        width: 860px;
-        padding: 5px 20px;
-        text-align: left;">
-      <h1 style="font-size:32px;float: left;"> {{ page.celebrate }}</h1>
-      <div style="float: left;margin: 0;width:100%;">
-        <p class="alert-box">
-          <span class="col one" style="margin-left: 0;"><span class="badge" style="display: inline;"><i class="material-icons" style="font-size:36px">announcement</i></span></span>
-          <span style="display: inline;">{{ page.announcement }}</span>
-        </p>
-      </div>
+
+    <!-- CONTENT -->
+    <hr>
+    <hr>
+    <hr>
+    <div style = "margin: 0px auto;width: 860px;padding: 5px 20px;text-align: left;">
+
+      <!-- INTO + HEADING -->
+      <h1 style="font-size:32px;float: left;"> {{ page.heading }}</h1>
+      <hr style="margin-bottom: 0px;">
+      <p>{{page.intro}}</p>
       <hr>
+
+
+      <!-- EVENT + VENUE -->
       <div class="reg col three" style="float: right;margin-top: -20px;">
-        <h1 style="font-size:21px;">Date and Time</h1>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Time</h1>
         {{ page.date_time }}
         <p><a>Add to Calendar</a></p>
-        <br>
-        <h1 style="font-size:21px;">Location</h1>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Where</h1>
         <p>{{page.address}}</p>
+        <h1 style="font-size:21px; margin-bottom: 4px;">How to reach</h1>
+        <p>{{page.address_sub}}</p>
         <p><a>View Map</a></p>
-      <button style="float:left; margin: 20px 0;">Get Tickets</button>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Things to bring</h1>
+        <p>{{page.bring_these}}</p>
       </div>
-      <div class="col eight"  style="float: left; max-width: 560px; margin-left: 0;">
-        <p>{{ page.core_content_line1 }}</p>
-        <p>{{ page.core_content_line2 }}</p>
+
+
+      <div class="col eight"  style="float: left; margin-left: 0; height: 300px;">
+         <div class="venue-image" src="{{ page.root_path }}/public/images/venue-info-bg.jpg" style="height: 300px;"></div>
+      </div>
+
+      <!-- OPENCALL -->
+      <hr>
+      <hr>
+      <div class="col three" style="margin: auto 30px;text-align: center;">
+        <div class="center" style="width: 128px; height: 128px; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background: #6C00B3;"></div>
+        <hr>
+        <hr>
+        <p>{{page.talks}}</p>
+        <div class="center">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;"><h2>OPEN CALL</h2></button></div>
+      </div>
+      <div class="col three" style="margin: auto 30px;text-align: center;">
+        <div class="center"  style="width: 128px; height: 128px; background: #6C00B3;"></div>
+        <hr>
+        <hr>
+        <p>{{page.workshops}}</p>
+        <div class="center">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;"><h2>OPEN CALL</h2></button></div>
+      </div>
+      <div class="col three" style="margin: auto 30px;text-align: center;">
+        <div class="center"  style="width: 128px; height: 128px; clip-path: circle(50% at 50% 50%); background: #6C00B3;"></div>
+        <hr>
+        <hr>
+        <p>{{page.showcase}}</p>
+        <div class="center">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;"><h2>OPEN CALL</h2></button></div>
+      </div>
+
+      <!-- TICKETS -->
+      <hr>
+      <hr>
+      <div>
+        <h1 style="color: #6C00B3; text-align: center;">{{page.focused}}</h1>
+        <div class="center" style="text-align:center;"><button><h2>Get Tickets</h2></button></div>
+      </div>
+
+      <!-- THEME-->
+      <hr>
+      <hr>
+      <div style="background: #6C00B3; color: #FFF; padding: 50px 0; text-align: center;">
+        <h3>/* Theme for PCD 2020 */</h3>
         <br>
-        <p>Read more about the <a href="https://medium.com/processing-foundation/a-modern-prometheus-59aed94abe85" target="_blank">history of Processing</a>.<p>
+        <p>{{page.themes}}</p>
+      </div>
+
+
+      <!-- Schedule -->
+      <hr>
+      <hr>
+      <div>
+        <div style="display: inline-block; float: left; color: #6C00B3;"><h2>Program Schedule</h2></div>
+        <div style="display: inline-block; float: right; color: #6C00B3;"><p style="padding-top: 10px;">01/02 Feb</p></div>
+        <hr style="margin-bottom: 0px;">
+        <div class="col five" style="min-height: 420px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day One First half</h3>
+          <p>{{page.dayonefirstschedule}}</p>
+        </div>
+        <div class="col five" style="min-height: 420px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day One Second half</h3>
+          <p>{{page.dayonesecondschedule}}</p>
+        </div>
+        <div class="col five" style="min-height: 420px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day Two First half</h3>
+          <p>{{page.daytwofirstschedule}}</p>
+        </div>
+        <div class="col five" style="min-height: 420px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day Two Second half</h3>
+          <p>{{page.daytwosecondschedule}}</p>
+        </div>
       </div>
     </div>
     <hr>
