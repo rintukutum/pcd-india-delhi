@@ -1,4 +1,3 @@
-<!-- font sizes: 44px, 26px, 21px -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -22,6 +21,11 @@
 
       p {
         font-size: 16px;
+      }
+
+      hr.dotted {
+        border-top: 1px dotted #6C00B3;
+        visibility: visible;
       }
 
       .reg p {
@@ -85,6 +89,14 @@
       button:hover {
         background-color: #8933c2;
         color: white;
+      }
+
+      button:disabled,
+      button[disabled]{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        cursor: default;
       }
 
       .alert-box {
@@ -159,17 +171,18 @@
 
 
       <!-- EVENT + VENUE -->
+      <hr class="dotted">
       <div class="reg col three" style="float: right;margin-top: -20px;">
-        <h1 style="font-size:21px; margin-bottom: 4px;">Time</h1>
-        {{ page.date_time }}
-        <p><a>Add to Calendar</a></p>
         <h1 style="font-size:21px; margin-bottom: 4px;">Where</h1>
-        <p>{{page.address}}</p>
+        <p style="font-size: 14px;">{{page.address}}</p>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Time</h1>
+        <p style="font-size: 14px;">{{ page.date_time }}</p>
+        <p><a>Add to Calendar</a></p>
         <h1 style="font-size:21px; margin-bottom: 4px;">How to reach</h1>
-        <p>{{page.address_sub}}</p>
+        <p style="font-size: 14px;">{{page.address_sub}}</p>
         <p><a>View Map</a></p>
         <h1 style="font-size:21px; margin-bottom: 4px;">Things to bring</h1>
-        <p>{{page.bring_these}}</p>
+        <p style="font-size: 14px;">{{page.bring_these}}</p>
       </div>
 
 
@@ -179,14 +192,19 @@
 
       <!-- OPENCALL -->
       <hr>
-      <hr>
+      <hr class="dotted">
       <div class="col three" style="margin: auto 30px;text-align: center;">
         <div class="center" style="width: 128px; height: 128px; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background: #6C00B3;"></div>
         <hr>
         <hr>
         <p>{{page.talks}}</p>
         <div class="center">
-          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;"><h2>OPEN CALL</h2></button></div>
+          <a href="https://docs.google.com/forms/d/172l1Xve6g0kq75DK4QiIuhr0ou1UgXiHvyHkId1G5a0/viewform" target="_blank">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;">
+            <h2 style="width: 100px;">OPEN CALL</h2>
+          </button>
+          </a>
+        </div>
       </div>
       <div class="col three" style="margin: auto 30px;text-align: center;">
         <div class="center"  style="width: 128px; height: 128px; background: #6C00B3;"></div>
@@ -194,7 +212,12 @@
         <hr>
         <p>{{page.workshops}}</p>
         <div class="center">
-          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;"><h2>OPEN CALL</h2></button></div>
+          <a href="https://docs.google.com/forms/d/1gO_Hgzxz0Cbp_7QDdirPtqLlKmrX1F3NvXCosKnlDKU/viewform" target="_blank">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;">
+            <h2 style="width: 100px;">OPEN CALL</h2>
+          </button>
+          </a>
+        </div>
       </div>
       <div class="col three" style="margin: auto 30px;text-align: center;">
         <div class="center"  style="width: 128px; height: 128px; clip-path: circle(50% at 50% 50%); background: #6C00B3;"></div>
@@ -202,19 +225,28 @@
         <hr>
         <p>{{page.showcase}}</p>
         <div class="center">
-          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;"><h2>OPEN CALL</h2></button></div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeROo7WArxJJ_euqQ5JupN3vga_vzkQb72szqCjbot3DG7Bzw/viewform" target="_blank">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;">
+            <h2 style="width: 100px;">OPEN CALL</h2>
+          </button>
+          </a>
+        </div>
       </div>
 
       <!-- TICKETS -->
       <hr>
+      <hr class="dotted">
       <hr>
+
       <div>
         <h1 style="color: #6C00B3; text-align: center;">{{page.focused}}</h1>
-        <div class="center" style="text-align:center;"><button><h2>Get Tickets</h2></button></div>
+        <div class="center" style="text-align:center;"><button disabled><h2>Get Tickets</h2></button><hr style="margin-bottom: 10px;"><p style="font-size: 12px;">Opens on 26th December</p></div>
       </div>
+
 
       <!-- THEME-->
       <hr>
+      <hr class="dotted">
       <hr>
       <div style="background: #6C00B3; color: #FFF; padding: 50px 0; text-align: center;">
         <h3>/* Theme for PCD 2020 */</h3>
@@ -226,27 +258,30 @@
       <!-- Schedule -->
       <hr>
       <hr>
-      <div>
-        <div style="display: inline-block; float: left; color: #6C00B3;"><h2>Program Schedule</h2></div>
-        <div style="display: inline-block; float: right; color: #6C00B3;"><p style="padding-top: 10px;">01/02 Feb</p></div>
-        <hr style="margin-bottom: 0px;">
-        <div class="col five" style="min-height: 420px;">
-          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day One First half</h3>
-          <p>{{page.dayonefirstschedule}}</p>
+      <hr class="dotted">
+      <div style="color: #6C00B3;">
+        <div style="display: inline-block; float: left;"><h2>Program Schedule</h2></div>
+        <div style="display: inline-block; float: right;"><p style="padding-top: 10px;">01/02 Feb</p></div>
+        <hr style="margin-bottom: 16px;">
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day One First half</h3>
+          <p style="padding: 8px 16px;">{{page.dayonefirstschedule}}</p>
         </div>
-        <div class="col five" style="min-height: 420px;">
-          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day One Second half</h3>
-          <p>{{page.dayonesecondschedule}}</p>
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day One Second half</h3>
+          <p style="padding: 8px 16px;">{{page.dayonesecondschedule}}</p>
         </div>
-        <div class="col five" style="min-height: 420px;">
-          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day Two First half</h3>
-          <p>{{page.daytwofirstschedule}}</p>
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day Two First half</h3>
+          <p style="padding: 8px 16px;">{{page.daytwofirstschedule}}</p>
         </div>
-        <div class="col five" style="min-height: 420px;">
-          <h3 style="background:  #6C00B3; color: #fff; padding: 8px;">Day Two Second half</h3>
-          <p>{{page.daytwosecondschedule}}</p>
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day Two Second half</h3>
+          <p style="padding: 8px 16px;">{{page.daytwosecondschedule}}</p>
         </div>
       </div>
+      <hr class="dotted">
+
     </div>
     <hr>
   </body>

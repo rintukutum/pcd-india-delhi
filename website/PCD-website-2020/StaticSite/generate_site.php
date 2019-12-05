@@ -1,6 +1,6 @@
 <?php
-$root_path="http://localhost/~mikecj/PCD2020/";
-$content_path="/Users/mikecj/Sites/PCD2020/content/";
+$root_path="http://localhost/~mikecj/PCD2020/Git/pcd-delhi/website/PCD-website-2020/CMS/";
+$content_path="/Users/mikecj/Sites/PCD2020/Git/pcd-delhi/website/PCD-website-2020/CMS/";
 $static_path="./public/";
 
 // Copy index files
@@ -36,6 +36,10 @@ for ($x = 0; $x < count($files); $x++) {
 	for($y = 0; $y < count($js_files); $y++){
 		$file_contents = str_replace(".//public/docs/js/".$js_files[$y],$js_files[$y],$file_contents);
 	}
+    // Images and Fonts
+    $file_contents = str_replace("public/fonts/","fonts/",$file_contents);
+    $file_contents = str_replace(".//public/images/","images/",$file_contents);
+
 	//
 	file_put_contents($file_to_mod,$file_contents);
 }
@@ -44,8 +48,9 @@ echo "Completed.\n";
 
 
 
-// Copy content
-custom_copy($content_path, $static_path."content/");
+// Copy content and public
+custom_copy($content_path."content/", $static_path."content/");
+custom_copy($content_path."public/", $static_path);
 
 function custom_copy($src, $dst) {
 

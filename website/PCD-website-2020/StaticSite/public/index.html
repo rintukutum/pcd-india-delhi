@@ -8,13 +8,24 @@
     <link rel="stylesheet" href="screen.css" type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
+      @font-face {
+        font-family: 'Avenir';
+        src: url("fonts/AvenirLTStd-Book.woff") format("woff"), url("fonts/AvenirLTStd-Book.ttf")  format("truetype");
+      }
+
       body, html {
         height: 100%;
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Avenir', serif;
       }
+
       p {
         font-size: 16px;
+      }
+
+      hr.dotted {
+        border-top: 1px dotted #6C00B3;
+        visibility: visible;
       }
 
       .reg p {
@@ -25,13 +36,37 @@
         min-height: 42px;
       }
 
+      .logo-image {
+        margin: 0px auto;
+        padding: 5px 20px;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/0000_white-background-purple3-1-800x812-q85.png");
+        width: 128px;
+        height: 140px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
       .hero-image {
         margin: 0px auto;
-        width: 860px;
         padding: 5px 20px;
         text-align: left;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/SAT.png");
+        width: 100%;
+        height: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
 
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+      .venue-image {
+        margin: 0px auto;
+        padding: 5px 20px;
+        text-align: left;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/venue-info-bg.jpg");
         height: 50%;
         background-position: center;
         background-repeat: no-repeat;
@@ -41,18 +76,27 @@
 
       button {
         border: none;
+        border-radius: 12px;
         outline: 0;
         display: inline-block;
         padding: 10px 25px;
-        color: black;
-        background-color: #ddd;
+        color: white;
+        background-color: #6C00B3;
         text-align: center;
         cursor: pointer;
       }
 
       button:hover {
-        background-color: #555;
+        background-color: #8933c2;
         color: white;
+      }
+
+      button:disabled,
+      button[disabled]{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        cursor: default;
       }
 
       .alert-box {
@@ -71,21 +115,37 @@
         position: relative;
         text-transform: uppercase;
       }
+
+      .center {
+        margin: auto;
+        width: 50%;
+        border: none;
+        padding: 10px;
+      }
+
+
+      .subheader{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:center;
+      }
     </style>
-
-
   </head>
   <body>
 
     <div id="container">
 
-      <h1 style="float: left;">
-        <a href="./">PCD Delhi 2020</a>
-        <strong>Processing Community Day</strong>
-      </h1>
+        <hr>
+
+        <a href="./">
+            <div class="logo-image" style="margin-right: 45%;">
+            <div style="padding:0;height:140px;height: 140px;font-size: 44px;padding-top: 50px;padding-left: 140px;color: #6C00B3;">Delhi</div>
+            </div>
+        </a>
 
 
-      <div style="float: right;">
+      <!--div style="float: right;">
         <ul id="navigation">
       <li style="display: inline; margin: 0 0 0 10px;">
       <a href="about.html">About</a>
@@ -99,39 +159,141 @@
       <li style="display: inline; margin: 0 0 0 10px;">
       <a href="contact-us.html">Contact details</a>
           </li>
-  </ul>      </div>
+  </ul>      </div-->
     </div>
 
+
+    <!-- BANNER -->
+    <hr>
+    <hr>
     <div class="hero-image"></div>
 
-    <div style = "margin: 0px auto;
-        width: 860px;
-        padding: 5px 20px;
-        text-align: left;">
-      <h1 style="font-size:32px;float: left;"> A day to celebrate art, code, and diversity —</h1>
-      <div style="float: left;margin: 0;width:100%;">
-        <p class="alert-box">
-          <span class="col one" style="margin-left: 0;"><span class="badge" style="display: inline;"><i class="material-icons" style="font-size:36px">announcement</i></span></span>
-          <span style="display: inline;">Our <a href="?/opencall">OPEN CALL</a> for presenters at Processing Community Day Delhi 2020 is now live! <br>Check out our call and make a submission today!</span>
-        </p>
-      </div>
+
+    <!-- CONTENT -->
+    <hr>
+    <hr>
+    <hr>
+    <div style = "margin: 0px auto;width: 860px;padding: 5px 20px;text-align: left;">
+
+      <!-- INTO + HEADING -->
+      <h1 style="font-size:32px;float: left;"> Processing Community Day</h1>
+      <hr style="margin-bottom: 0px;">
+      <p>Processing Community Day (PCD) is an initiative to celebrate Art, Code and Diversity, worldwide. PCD Delhi is our bit of contribution to the celebration. This year PCD 2020 our intention is to bring community from Science, Art and Technology together and have a fun discussion, hands-on experience, learn, contribute and collaborate.<br><br>We welcome artists, educators, hobbyists, creative technologists, scientists, designers, researchers to participate in the two-day event. It could be through giving a talk, showcasing your work or conducting a workshop. Major theme for the two-day event is Evolutionary Algorithm, Tool-building, Computational Art (Art and Code), Ethics and AI, Performance Art, Community led technologies.</p>
       <hr>
+
+
+      <!-- EVENT + VENUE -->
+      <hr class="dotted">
       <div class="reg col three" style="float: right;margin-top: -20px;">
-        <h1 style="font-size:21px;">Date and Time</h1>
-        <p>Feb 01, 2020 and Feb 02, 2020 </p> <p>9:30 AM – 2:30 PM IST</p>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Where</h1>
+        <p style="font-size: 14px;">CSIR-IGIB (South Campus)</p>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Time</h1>
+        <p style="font-size: 14px;">February 1st and 2nd<br>9:00 am onwards</p>
         <p><a>Add to Calendar</a></p>
-        <br>
-        <h1 style="font-size:21px;">Location</h1>
-        <p>Timeblur Studio, D26 (Opp. B9 Gate 3), Bhagwan Mahaveer Road, Vasant Kunj, New Delhi, Delhi 110070</p>
+        <h1 style="font-size:21px; margin-bottom: 4px;">How to reach</h1>
+        <p style="font-size: 14px;">11 minute walk from Sukhdev Vihar Metro Station</p>
         <p><a>View Map</a></p>
-      <button style="float:left; margin: 20px 0;">Get Tickets</button>
+        <h1 style="font-size:21px; margin-bottom: 4px;">Things to bring</h1>
+        <p style="font-size: 14px;">Laptop and a notepad</p>
       </div>
-      <div class="col eight"  style="float: left; max-width: 560px; margin-left: 0;">
-        <p>Processing is a free and open-source software platform for learning how to code within the context of the visual arts, created by Casey Reas and Ben Fry. It is complemented by a web version, called p5.js, created by Lauren McCarthy. To date, Processing and p5.js are used by a worldwide community of artists, coders, educators, students.</p>
-        <p>The aim of this community is to make code accessible to diverse communities, and to merge the barriers between Art, Science and Tecnology. On the Day of the event, you'll learn few tricks and play with p5 to add life to a character or to just create beautiful patterns and prints with a machine. No prior coding experience is really required to make it, just a ton of curiosity to learn and understand how programs work?</p>
+
+
+      <div class="col eight"  style="float: left; margin-left: 0; height: 300px;">
+         <div class="venue-image" src="images/venue-info-bg.jpg" style="height: 300px;"></div>
+      </div>
+
+      <!-- OPENCALL -->
+      <hr>
+      <hr class="dotted">
+      <div class="col three" style="margin: auto 30px;text-align: center;">
+        <div class="center" style="width: 128px; height: 128px; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background: #6C00B3;"></div>
+        <hr>
+        <hr>
+        <p>Talk about your work, concept, research or other bits related to the theme of PCD 2020. The talk would be not more than 25 minutes and can include a QnA from the audience.</p>
+        <div class="center">
+          <a href="https://docs.google.com/forms/d/172l1Xve6g0kq75DK4QiIuhr0ou1UgXiHvyHkId1G5a0/viewform" target="_blank">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;">
+            <h2 style="width: 100px;">OPEN CALL</h2>
+          </button>
+          </a>
+        </div>
+      </div>
+      <div class="col three" style="margin: auto 30px;text-align: center;">
+        <div class="center"  style="width: 128px; height: 128px; background: #6C00B3;"></div>
+        <hr>
+        <hr>
+        <p>We are conducting an hour- long workshop to breakdown few concepts for you and how to work with code. Fill in the form if you’re interested in taking the workshop which is on the theme of PCD 2020.</p>
+        <div class="center">
+          <a href="https://docs.google.com/forms/d/1gO_Hgzxz0Cbp_7QDdirPtqLlKmrX1F3NvXCosKnlDKU/viewform" target="_blank">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;">
+            <h2 style="width: 100px;">OPEN CALL</h2>
+          </button>
+          </a>
+        </div>
+      </div>
+      <div class="col three" style="margin: auto 30px;text-align: center;">
+        <div class="center"  style="width: 128px; height: 128px; clip-path: circle(50% at 50% 50%); background: #6C00B3;"></div>
+        <hr>
+        <hr>
+        <p>If you’re a student, a practicioner, or have a fun gadget or a project to showcase, we have space for you. Tell us what you’ll need and we will help in installing it for you.</p>
+        <div class="center">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeROo7WArxJJ_euqQ5JupN3vga_vzkQb72szqCjbot3DG7Bzw/viewform" target="_blank">
+          <button style="float:left; margin: 20px 0;border: 2px solid #6C00B3;background: #fff;color: black;padding: 10px 8px;">
+            <h2 style="width: 100px;">OPEN CALL</h2>
+          </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- TICKETS -->
+      <hr>
+      <hr class="dotted">
+      <hr>
+
+      <div>
+        <h1 style="color: #6C00B3; text-align: center;">If you want to be a part of the<br>focused group at the event and learn how to code</h1>
+        <div class="center" style="text-align:center;"><button disabled><h2>Get Tickets</h2></button><hr style="margin-bottom: 10px;"><p style="font-size: 12px;">Opens on 26th December</p></div>
+      </div>
+
+
+      <!-- THEME-->
+      <hr>
+      <hr class="dotted">
+      <hr>
+      <div style="background: #6C00B3; color: #FFF; padding: 50px 0; text-align: center;">
+        <h3>/* Theme for PCD 2020 */</h3>
         <br>
-        <p>Read more about the <a href="https://medium.com/processing-foundation/a-modern-prometheus-59aed94abe85" target="_blank">history of Processing</a>.<p>
+        <p>//Evolutionary Algorithm //Computation Art (Art and Code) <br>//Ethics and AI //Tool building //Data Visualisation <br>//Community Led technologies</p>
       </div>
+
+
+      <!-- Schedule -->
+      <hr>
+      <hr>
+      <hr class="dotted">
+      <div style="color: #6C00B3;">
+        <div style="display: inline-block; float: left;"><h2>Program Schedule</h2></div>
+        <div style="display: inline-block; float: right;"><p style="padding-top: 10px;">01/02 Feb</p></div>
+        <hr style="margin-bottom: 16px;">
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day One First half</h3>
+          <p style="padding: 8px 16px;">9:00 am<br>Introduction<br><br>10:00 am<br>Talk (Two speakers)<br><br>11:00 am<br>Workshop - Breakdown of two Concepts Orientation - Introducing Themes<br><br>12:00 pm<br>Forming Groups on PCD 2020 themes<br><br>1:00 pm<br>Break for Lunch</p>
+        </div>
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day One Second half</h3>
+          <p style="padding: 8px 16px;">Extended Workshop<br><br>2:00 pm<br>Focus Group discussions<br><br>5:00 pm<br>Mentoring Sessions<br><br>7:00 pm Break for Tea Performances</p>
+        </div>
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day Two First half</h3>
+          <p style="padding: 8px 16px;">9:00 am<br>Problem Solving Session<br><br>10:00 am<br>Talk (Two Speakers)<br><br>11:00 am Workshop<br><br>1:00 pm<br>Break for Lunch</p>
+        </div>
+        <div class="col five" style="min-height: 420px;margin: 0px 50px 0px 0px;">
+          <h3 style="background:  #6C00B3; color: #fff; padding: 8px 16px;">Day Two Second half</h3>
+          <p style="padding: 8px 16px;">2:00 pm<br>Focus Group continues<br><br>5:00 pm<br>Open-Community Discussion<br><br>6:00 pm<br>Making a Repository of the Collective Work (Google form)<br><br>7:00 pm<br>Wrap up and Group Pictures</p>
+        </div>
+      </div>
+      <hr class="dotted">
+
     </div>
     <hr>
   </body>

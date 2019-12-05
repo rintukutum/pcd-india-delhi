@@ -1,10 +1,18 @@
 name: PCD Delhi 2020
 group: Processing Community Day
-email: <delhi@processingindia.org>
-celebrate: A day to celebrate art, code, and diversity —
-date_time: <p>Feb 01, 2020 and Feb 02, 2020 </p> <p>9:30 AM – 2:30 PM IST</p>
-address: Timeblur Studio, D26 (Opp. B9 Gate 3), Bhagwan Mahaveer Road, Vasant Kunj, New Delhi, Delhi 110070
-announcement: Our <a href="?/opencall">OPEN CALL</a> for presenters at Processing Community Day Delhi 2020 is now live! <br>Check out our call and make a submission today!
-core_content_line1: Processing is a free and open-source software platform for learning how to code within the context of the visual arts, created by Casey Reas and Ben Fry. It is complemented by a web version, called p5.js, created by Lauren McCarthy. To date, Processing and p5.js are used by a worldwide community of artists, coders, educators, students.
-core_content_line2: The aim of this community is to make code accessible to diverse communities, and to merge the barriers between Art, Science and Tecnology. On the Day of the event, you'll learn few tricks and play with p5 to add life to a character or to just create beautiful patterns and prints with a machine. No prior coding experience is really required to make it, just a ton of curiosity to learn and understand how programs work?
-
+email: <mike@timeblur.io>
+heading: Processing Community Day
+date_time: February 1st and 2nd<br>9:00 am onwards
+address: CSIR-IGIB (South Campus)
+address_sub: 11 minute walk from Sukhdev Vihar Metro Station
+bring_these: Laptop and a notepad
+intro: Processing Community Day (PCD) is an initiative to celebrate Art, Code and Diversity, worldwide. PCD Delhi is our bit of contribution to the celebration. This year PCD 2020 our intention is to bring community from Science, Art and Technology together and have a fun discussion, hands-on experience, learn, contribute and collaborate.<br><br>We welcome artists, educators, hobbyists, creative technologists, scientists, designers, researchers to participate in the two-day event. It could be through giving a talk, showcasing your work or conducting a workshop. Major theme for the two-day event is Evolutionary Algorithm, Tool-building, Computational Art (Art and Code), Ethics and AI, Performance Art, Community led technologies.
+talks: Talk about your work, concept, research or other bits related to the theme of PCD 2020. The talk would be not more than 25 minutes and can include a QnA from the audience.
+workshops: We are conducting an hour- long workshop to breakdown few concepts for you and how to work with code. Fill in the form if you’re interested in taking the workshop which is on the theme of PCD 2020.
+showcase: If you’re a student, a practicioner, or have a fun gadget or a project to showcase, we have space for you. Tell us what you’ll need and we will help in installing it for you.
+focused: If you want to be a part of the<br>focused group at the event and learn how to code
+themes: //Evolutionary Algorithm //Computation Art (Art and Code) <br>//Ethics and AI //Tool building //Data Visualisation <br>//Community Led technologies
+dayonefirstschedule: 9:00 am<br>Introduction<br><br>10:00 am<br>Talk (Two speakers)<br><br>11:00 am<br>Workshop - Breakdown of two Concepts Orientation - Introducing Themes<br><br>12:00 pm<br>Forming Groups on PCD 2020 themes<br><br>1:00 pm<br>Break for Lunch
+dayonesecondschedule: Extended Workshop<br><br>2:00 pm<br>Focus Group discussions<br><br>5:00 pm<br>Mentoring Sessions<br><br>7:00 pm Break for Tea Performances
+daytwofirstschedule: 9:00 am<br>Problem Solving Session<br><br>10:00 am<br>Talk (Two Speakers)<br><br>11:00 am Workshop<br><br>1:00 pm<br>Break for Lunch
+daytwosecondschedule: 2:00 pm<br>Focus Group continues<br><br>5:00 pm<br>Open-Community Discussion<br><br>6:00 pm<br>Making a Repository of the Collective Work (Google form)<br><br>7:00 pm<br>Wrap up and Group Pictures
