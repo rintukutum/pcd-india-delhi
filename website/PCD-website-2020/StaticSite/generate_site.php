@@ -14,7 +14,7 @@ copy($root_path."?/contact-me/", $static_path."contact-us.html");
 copy($root_path."/public/docs/css/screen.css", $static_path."screen.css");
 
 // Copy js files
-$js_files=array("gallery.js", "init-gallery.js", "jquery-1.3.2.js");
+$js_files=array("gallery.js", "init-gallery.js", "jquery-1.3.2.js", "opSketch.js");
 for ($x = 0; $x < count($js_files); $x++) {
 	copy($root_path."/public/docs/js/".$js_files[$x],$static_path.$js_files[$x]);
 }
