@@ -6,10 +6,10 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="PCD Delhi 2020">
-    <meta property="og:image" content="images/pcd_banner.png">
+    <meta property="og:image" content="images/pcd_banner.jpg">
     <meta property="og:description" content="Processing Community Day (PCD) is an initiative to celebrate Art, Code and Diversity, worldwide.  We welcome artists, educators, hobbyists, creative technologists, scientists, designers, researchers to participate in the two-day event. It could be through giving a talk, showcasing your work or conducting a workshop.">
-    <meta property="og:url" content="https://processingindia.org/delhi/index.html">
     <meta name="twitter:card" content="summary_large_image">
+
 
     <title>PCD Delhi 2020 | Homepage </title>
     <link rel="alternate" type="application/atom+xml" href=".//?/feed/">
@@ -136,6 +136,10 @@
         filter: grayscale(1);
       }
 
+      .mobilespacing{
+        display: none;
+      }
+
       button {
         border: none;
         border-radius: 12px;
@@ -223,6 +227,19 @@
           padding: 0px;
         }
 
+        .maincontent{
+          margin-bottom: 200px;
+        }
+
+        #share-buttons-container {
+          padding-bottom: 100px;
+        }
+
+
+        .mobilespacing{
+          display: block;
+        }
+
         .reg {
           float: left;
           margin-top: 20px;
@@ -263,6 +280,7 @@
           padding: 0px;
         }
 
+
         .reg {
           float: left;
           margin-top: 20px;
@@ -299,6 +317,17 @@
         }
       }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154148443-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154148443-1');
+    </script>
+
   </head>
   <body>
 
@@ -374,10 +403,12 @@
 
 
       <!-- OPENCALL -->
+      <a name="opencall"></a>
       <hr>
       <hr class="dotted">
       <div class="opencall center">
         <div class="col three" style="text-align: center;">
+          <a name="talks"></a>
           <div class="center" style="width: 128px;height: 128px; -webkit-clip-path: url(#talks-clip-path); clip-path: url(#talks-clip-path);background: #6C00B3;"></div>
           <svg class="svg" width="0" height="0">
             <clipPath id="talks-clip-path" clipPathUnits="objectBoundingBox">
@@ -399,6 +430,7 @@
           </div>
         </div>
         <div class="col three" style="text-align: center;">
+          <a name="workshops"></a>
           <div class="center"  style="width: 128px; height: 128px; background: #6C00B3;"></div>
           <svg class="svg" width="0" height="0">
           </svg>
@@ -417,12 +449,14 @@
           </div>
         </div>
         <div class="col three" style="text-align: center;">
+          <a name="showcase"></a>
           <div class="center"  style="width: 128px; height: 128px; -webkit-clip-path: url(#showcase-clip-path); clip-path: url(#showcase-clip-path); background: #6C00B3;"></div>
           <svg class="svg" width="0" height="0">
             <clipPath id="showcase-clip-path" clipPathUnits="objectBoundingBox">
               <path d="M0.5,0.5 m-0.5,0 a0.5,0.5,0,1,0,1,0 a0.5,0.5,0,1,0,-1,0"></path>
             </clipPath>
           </svg>
+
           <hr>
           <hr>
           <h2>Showcase</h2>
@@ -440,6 +474,7 @@
       </div>
 
       <!-- TICKETS -->
+      <a name="register"></a>
       <hr>
       <hr class="dotted">
       <hr>
@@ -493,14 +528,17 @@
         </div>
       </div>
       <hr class="dotted">
+
       <footer style="text-align: center;background: white;min-height: 50px;">
+        <a name="contact"></a>
         <a href="mailto:pcddelhi@gmail.com" target="_blank" style="cursor: pointer;float: left;">Contact Us</a>
         <p class="credits" style="float: right;">
           <a class="credits__link" href="https://www.openprocessing.org/sketch/494102"> perlin noise sketch</a>
           by
           <a class="credits__link" href="https://www.openprocessing.org/user/111178"> yasai </a>
         </p>
-
+        <hr class="mobilespacing">
+        <a name="share"></a>
         <div id="share-buttons-container" style="position: relative;">
           <div id="share-buttons-block" style="margin: 0;position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);" >
 
@@ -525,10 +563,7 @@
           </a>
         </div>
       </footer>
-
     </div>
-    <hr>
-
     <script src="opSketch.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
