@@ -5,40 +5,169 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>{{ page.title }}, {{ page.name }}'s Portfolio </title>
+    <title>{{ page.title }}, {{ page.name }} </title>
     <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
     <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/screen.css" type="text/css" media="screen">
+    <style type="text/css">
+      @font-face {
+        font-family: 'Avenir';
+        src: url("public/fonts/AvenirLTStd-Book.woff") format("woff"), url("public/fonts/AvenirLTStd-Book.ttf")  format("truetype");
+      }
+
+
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Avenir', serif;
+      }
+
+
+      .logo-image {
+        margin: 0px auto;
+        padding: 5px 20px;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("{{ page.root_path }}/public/images/0000_white-background-purple3-1-800x812-q85.png");
+        width: 100px;
+        height: 140px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+
+    </style>
   </head>
   <body>
-    <div id="container" class="{{ page.id }}">
-      <h1 class="col three" style="float: left;">
-        <a href="{{ page.root_path }}">{{ page.name }}</a>
-        <strong>{{ page.group }}</strong>
-      </h1>
-      <div style="float: right;">
+
+
+    <div id="container" style="width: 100%;">
+
+        <hr>
+
+        <a href="{{ page.root_path }}">
+            <div id="_logo_image" class="logo-image" style="margin-right: 46.5%;">
+            <div id="_logo_text" class="logo-text">Delhi</div>
+            </div>
+        </a>
+
+
+      <div style="text-align: center; z-index: 1000;">
         {% include 'partials/navigation/navigation.html' %}
       </div>
     </div>
-    <hr>
-    <div id="content"  style = "margin: 0px auto;
-        width: 560px;
-        padding: 5px 20px;
-        text-align: left;">
-      <h1 style="font-size:32px;text-align: center;"> <a href="{{ page.root_path }}">{{ page.title }}</a> </h1>
 
-      <div>
-        {% include 'partials/assets/media.html' %}
-        <div id="gallery-navigation" class="col three" style="width:100%;">
-          <p style="float: left;"><em>&larr;</em> <a href="#" id="previous-image">Previous image</a> </p>
-          <p id="gallery-count" class="col one" style="color: white;"><em style="color: white;">&#8470;</em> <span>1/1</span></p>
-          <p style="float: right;margin-right: 40px;"><a href="#" id="next-image">Next image</a> <em>&rarr;</em></p>
+    <hr>
+    <div id="content" class="maincontent">
+      <!--h1 style="font-size:32px;text-align: center;"> <a href="{{ page.root_path }}">{{ page.title }}</a> </h1-->
+
+      <div style="width:100%; height:100%" >
+        <div  style="margin-left: auto; margin-right: auto; display: block; width: 60%;">{% include 'partials/assets/media.html' %}</div>
+        <div id="gallery-navigation" class="col three" style="position: absolute; width: 60%; left: 21.5%;; bottom: 40%;">
+          <a href="#" id="previous-image"><p style="float:left;"><em style="font-size: 28px; color: #222;">&larr;</em></p></a>
+          <a href="#" id="next-image"><p style="float:right;"> <em style="font-size: 28px; color: #222;">&rarr;</em></p></a>
+
         </div>
+        <div class="col three" style="position: absolute; width: 60%; left: 21.5%;">
+          <span style="font-size: 14px; float: left; margin-left: 60px;display: {{ page.gallery_visibility }}">Event photos</span>
+          <p id="gallery-count" class="col one" style="color: #222; float: right; margin-right: 60px;"><em style="color: black;">&#8470;</em> <span>1/1</span></p>
+        </div>
+
+        <!--p id="project-count" class="col one"><em>&#8470;</em> {{ page.index }}/{{ page.siblings_count }}</p>
+        <p id="gallery-count" class="col one">
+          <em>&#8470;</em> <span>1/1</span>
+        </p-->
       </div>
 
       <hr>
-      <div class="col eight"  style="max-width: 560px; margin-left: 0;">
+      <div>
+        <h1 style="font-size:22px;display: {{ page.title_visibility }}"> {{ page.title }} </h1>
         <p>{{ page.content }}</p>
       </div>
+      <hr>
+
+      <div style="display: {{ page.event_visibility }}">
+        <!-- EVENT + VENUE -->
+        <hr class="dotted">
+        <h2 style="color: #6C00B3;"> /// Event Page </h2>
+        <img class="venue-image col seven" style="max-height: 300px;" src="{{ page.root_path }}/public/images/timeblur_studio_GOPR0372.jpg"></img>
+        <div class="reg col three">
+          <h1 style="font-size:21px; margin-bottom: 4px;">Where</h1>
+          <p style="font-size: 14px;">{{page.address}}</p>
+          <h1 style="font-size:21px; margin-bottom: 4px;">Time</h1>
+          <p style="font-size: 14px;">{{ page.date_time }}</p>
+          <p style="display: {{page.addcalender}}"><a>Add to Calendar</a></p>
+          <h1 style="font-size:21px; margin-bottom: 4px;">How to reach</h1>
+          <p style="font-size: 14px;">{{page.address_sub}}</p>
+          <p><a target="_blank" href="https://www.google.nr/maps/place/Timeblur+Studio/@28.5291213,77.1562312,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1dcffef9c785:0x86c5d2aa86c2ee1e!8m2!3d28.5291166!4d77.1584199">View Map</a></p>
+          <h1 style="font-size:21px; margin-bottom: 4px;">Things to bring</h1>
+          <p style="font-size: 14px;">{{page.bring_these}}</p>
+        </div>
+      </div>
+      <hr>
+
+
+      <div style="display: {{ page.speakers_visibility }}">
+        <hr class="dotted">
+        <h2 style="color: #6C00B3;">///Speakers</h2>
+        <div class="col five" style="display: inline;">
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We will be meeting <a href="https://twitter.com/samarthishere?ref_src=twsrc%5Etfw">@samarthishere</a> tomorrow for a talk on Why Generative art now? also, with some cool glitches and beautiful works like these. <br>See you tomorrow at the event. <a href="https://twitter.com/hashtag/PCD2019?src=hash&amp;ref_src=twsrc%5Etfw">#PCD2019</a><a href="https://twitter.com/ProcessingIndia?ref_src=twsrc%5Etfw">@ProcessingIndia</a> It&#39;s an exciting moment for all of us :) <a href="https://t.co/v4MvA5BIaZ">pic.twitter.com/v4MvA5BIaZ</a></p>&mdash; Timeblur (@timeblurIndia) <a href="https://twitter.com/timeblurIndia/status/1089220350314008577?ref_src=twsrc%5Etfw">January 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="col five" style="display: inline;">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Happy to announce <a href="https://twitter.com/rintukutum?ref_src=twsrc%5Etfw">@rintukutum</a> who’s pursuing his PhD in Computational Biology at @IGIB_DEL_110007. Rintu will be talking about Data Visualisation along with few demos on stage. It’s going to be a Fun-Day Sunday <a href="https://twitter.com/hashtag/PCD2019?src=hash&amp;ref_src=twsrc%5Etfw">#PCD2019</a>.<br>Register soon!! <a href="https://t.co/Qj1sEb5amg">https://t.co/Qj1sEb5amg</a> <a href="https://twitter.com/ProcessingIndia?ref_src=twsrc%5Etfw">@ProcessingIndia</a> <a href="https://t.co/YBCXgtAkWl">pic.twitter.com/YBCXgtAkWl</a></p>&mdash; Timeblur (@timeblurIndia) <a href="https://twitter.com/timeblurIndia/status/1088712912661827584?ref_src=twsrc%5Etfw">January 25, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="col five" style="display: inline;">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We are super excited to have Dr. Mitali Mukerji as a speaker on stage for <a href="https://twitter.com/hashtag/PCD2019?src=hash&amp;ref_src=twsrc%5Etfw">#PCD2019</a> in Delhi. She is a Chief scientist from CSIR-IGIB @IGIB_DEL_110007, and will give a talk on the Importance of creative visualisation in genomics. <br><br>Register soon!! <a href="https://t.co/7sUEbkqF2O">https://t.co/7sUEbkqF2O</a> <a href="https://t.co/LK4vnh6LIP">pic.twitter.com/LK4vnh6LIP</a></p>&mdash; Timeblur (@timeblurIndia) <a href="https://twitter.com/timeblurIndia/status/1088076231197843458?ref_src=twsrc%5Etfw">January 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col five" style="display: inline;">
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Happening is the Processing Day in Delhi on 27th Jan<br><br>See you there<a href="https://twitter.com/hashtag/PCD2019?src=hash&amp;ref_src=twsrc%5Etfw">#PCD2019</a> <a href="https://t.co/yABNQZupYR">pic.twitter.com/yABNQZupYR</a></p>&mdash; Timeblur (@timeblurIndia) <a href="https://twitter.com/timeblurIndia/status/1086319591322722304?ref_src=twsrc%5Etfw">January 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <hr>
+      </div>
+
+      <hr class="dotted">
+      <div style="display: {{ page.activity_visibility }}">
+        <h2 style="color: #6C00B3;">///Activity Work</h2>
+        <hr>
+      </div>
+
+    <footer style="text-align: center;background: white;min-height: 50px;">
+        <a name="contact"></a>
+        <a href="mailto:pcddelhi@gmail.com" target="_blank" style="cursor: pointer;float: left;">Contact Us</a>
+        <p class="credits" style="float: right;">
+          <a class="credits__link" href="https://www.openprocessing.org/sketch/494102"> perlin noise sketch</a>
+          by
+          <a class="credits__link" href="https://www.openprocessing.org/user/111178"> yasai </a>
+        </p>
+        <hr class="mobilespacing">
+        <a name="share"></a>
+        <div id="share-buttons-container" style="position: relative;">
+          <div id="share-buttons-block" style="margin: 0;position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);" >
+
+          <!-- Email -->
+          <a href="mailto:?&subjectPCD2020=&body=https://processingindia.org/delhi Join me at #PCD2020 in Delhi on 1st Feb -- https://processingindia.org/delhi" style="text-decoration: none;">
+              <img class="withfilter" style="width: 35px;padding: 5px;border: 0;box-shadow: 0;display: inline;" src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://processingindia.org/delhi" target="_blank" style="text-decoration: none;">
+              <img class="withfilter" style="width: 35px;padding: 5px;border: 0;box-shadow: 0;display: inline;" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://processingindia.org/delhi&title=&summary=Join me at #PCD2020 in Delhi on 1st Feb -- https://processingindia.org/delhi&source=" target="_blank" style="text-decoration: none;">
+              <img class="withfilter" style="width: 35px;padding: 5px;border: 0;box-shadow: 0;display: inline;" src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+          </a>
+
+          <!-- Twitter -->
+          <a href="https://twitter.com/home?status=https://processingindia.org/delhi Join me at #PCD2020 in Delhi on 1st Feb -- https://processingindia.org/delhi" target="_blank" style="text-decoration: none;">
+              <img class="withfilter" style="width: 35px;padding: 5px;border: 0;box-shadow: 0;display: inline;" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+          </a>
+        </div>
+      </footer>
     </div>
     <script src="{{ page.root_path }}/public/docs/js/jquery-1.3.2.js" type="text/javascript" charset="utf-8"></script>
 

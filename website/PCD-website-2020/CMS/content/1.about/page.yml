@@ -1,57 +1,42 @@
 bypass_cache: true
 title: About
-
-01.jpg:
-  description: CAPTION
-
+event_visibility: none
+title_visibility: none
+gallery_visibility: none
+speakers_visibility: none
+activity_visibility: none
 content: |
-  The first PCD Delhi was held on January 27, 2019 at Timeblur Studio in New Delhi. Visit the 2019 site to see the full listing of speakers, talks, workshops and panels.
+
+  <h3> Processing Community Day </h3>
+  Processing Community Day(PCD) is a Community driven event, to celebrate Art, Code and Diversity. It is a worldwide event and mainly runs for a full day or two. The first PCD Delhi event was held on January 27, 2019 at Timeblur Studio in New Delhi.
+  <br>PCD brings together Artists, Coders, and Technologists , but also Scientists, Researchers, Designers, Engineers, and Hobbyists together to share their ideas, work, research with eachother. They could be from any cultural, educational or professional background. Our objective for the event is to encourage the community to think algorithmically, and draw inpiration from eachother to work fearlessly with code. We are open to have any age group to our community, and have no bias towards one specifically.
   <hr>
-  <h6> WHAT IS PROCESSING COMMUNITY DAY?</h6>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-  <h6> BREIF INTRO AND MISSION STATEMENT </h6>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  <h6> WHAT IS PROCESSING?</h6>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+  <h3> What is Processing?</h3>
+  Processing is a Visual programming platform for everyone to use. The makers of Processing tool, Casey Reas and Ben Fry have made the language simple and easy for anyone to quickly make fun sketches with it in no time. You can make shapes, add color, add interactions with mouse, and do more complex stuff like fractals and simulations in Processing. There is an amazing community support for Processing tool. There is <a href="http://processing.org/" target="_blank">Processing</a> main website, <a href="https://thecodingtrain.com/" target="_blank">Coding Train</a> on Youtube and <a href="http://openprocessing.org/" target="_blank">OpenProcessing</a> to get started with Processing. They have also released <a href="http://openprocessing.org/https://p5js.org/" target="_blank">P5.js</a> which is to make your Sketch work on Web.
+  <hr>
+  <h3>Open Call for PCD</h3>
+  Themes for the PCD 2020 are on Evolutionary Algorithm, Computational Art (Art and Code), Ethics and AI, Tool Building, Data Visualisation and Community led technologies. Open call is for anyone who would like to give a talk, take a workshop, facilitate a focused group, or/and showcase project/work. More information on the <a href="https://day.processing.org/" target="_blank">main page</a>. If you need any help in making a proposal on the given topics of the theme, <a href="mailto:pcddelhi@gmail.com" target="_blank"> get in touch </a> with us and we will assign you a mentor. We as a community are inspired by Processing and P5.js but the proposals need not be limited to these tools only.
+  <hr>
+  <h3> Volunteering </h3>
+  If you like to volunteer for PCD 2020 at the event or before, <a href="mailto:pcddelhi@gmail.com" target="_blank"> get in touch </a>  with us.
 
   <hr>
-  <h6> VOLUNTEERING </h6>
-  <a> Sign up here. </a>
+  <h3> Accessibility and Families </h3>
+  PCD 2020 is happening at CSIR-IGIB South Campus, New Delhi. The closest metro station is Sukhdev Vihar Metro Station which is on Magenta Line. There is facility for wheelchair and reserved seats should you need that at the Venue. We have facilities for Pregnant women. We encourage families to get their children. If the attendees are 12 year or below, they should get a parent or a guardian along. Any other particular needs that is not covered here, please let us know. We intend to create a safe and warm environment for our community. We follow a <a target="_blank" href="https://drive.google.com/file/d/1W7KE9ROu5sSc_lkPX0smPkox_t-BYu-G/view">Code of conduct</a> for all Processing Workshops.
 
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <hr>
+  <h3> Organizers </h3>
+  <ul>
+    <li>Mallikarjun M  <a href="mailto:mike@timeblur.io" target="_blank"> mike@timeblur.io </a></li>
+    <li>Natasha Singh  <a href="mailto:natasha@timeblur.io" target="_blank"> natasha@timeblur.io </a></li>
+    <li>Rintu Kutum  <a href="mailto:rintu.kutum@igib.in" target="_blank"> rintu.kutum@igib.in </a></li>
+  </ul>
+  Should you need to get in touch with us regarding the website along with other Event related work. The website is an ever evolving community work, we are open for any suggestions or edits you think would be helpful for us. Processing Community Day is a volunteer-organized event, be a part of it too!
 
+  <hr>
+  <h3> Support </h3>
+  Processing Community Day is an independant community-driven volunteer-led event. For PCD 2020, CSIR-IGIB are providing us the venue and equipments needed for the event. Speakers and Workshop leaders will recieve an honorarium for their time. There will be breakfast, lunch boxes and snacks provided at the event.
 
-  <h6> ACCESSIBILITY & FAMILIES </h6>
-  Processing Community Day Delhi 2020 will be held at IGIB. Our venue is wheelchair-accessible, and we will provide reserved seating for attendees with mobility devices. At this time, we are unable to provide realtime captioning at our event.
-  Parents are also welcome to the event and encouraged to bring children to our conference. Children under 12 should be accompanied by a parent or guardian. Our venue is all-ages.
-  Have questions about other accessibility needs? <a>Please get in touch.</a>
-
-  <h6> CODE OF CONDUCT </h6>
-  We strive to create a safe and welcoming environment for all attendees. All organizers and attendees should avoid any misconducts and follow the <a href="https://drive.google.com/file/d/1W7KE9ROu5sSc_lkPX0smPkox_t-BYu-G/view">Conference Code of Conduct</a>.
-
-
-  <h6> ORGANIZERS </h6>
-  Processing Community Day is a volunteer-organized event. PCD Delhi main organizers are Natasha, Rintu, Samarth, Sandip and Mike. Additional help from Lipsa , Debashish and Kadambini.
-
-
-  <h6> SPONSORS </h6>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <hr>
+  <h3> Sponsorship </h3>
+  Interested in supporting art, code and diversity in Delhi? <a href="mailto:pcddelhi@gmail.com" target="_blank"> Get in touch </a>
